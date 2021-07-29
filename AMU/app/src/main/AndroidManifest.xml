@@ -11,7 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AMU">
-        <activity android:name=".PaginaPrincipal"></activity>
+        <activity android:name=".PantallaCompra"></activity>
+        <activity android:name=".PantallaCatalogo" />
+        <activity android:name=".PantallaComprador" />
+        <activity android:name=".PantallaRetiro" />
+        <activity android:name=".RegistrarVenta" />
+        <activity android:name=".Usuarios" />
+        <activity android:name=".PaginaPrincipal" />
         <activity android:name=".Register" />
         <activity android:name=".About" />
         <activity android:name=".MainActivity">
