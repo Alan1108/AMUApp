@@ -43,7 +43,7 @@
         android:layout_marginStart="48dp"
         android:layout_marginTop="8dp"
         android:background="#c4e6a2"
-        android:text=" $"
+        android:text=" $20.00"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -57,6 +57,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="@color/white"
+        android:onClick="onClick30"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView26"
         app:srcCompat="@drawable/carro" />
@@ -68,6 +69,7 @@
         android:layout_marginStart="128dp"
         android:layout_marginTop="4dp"
         android:backgroundTint="@color/white"
+        android:onClick="onClick10"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView16"
         app:srcCompat="@drawable/carro" />
@@ -79,7 +81,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="92dp"
         android:background="#c4e6a2"
-        android:text=" $"
+        android:text=" $15.00"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -93,7 +95,7 @@
         android:layout_marginStart="36dp"
         android:layout_marginTop="4dp"
         android:background="#c4e6a2"
-        android:text=" $"
+        android:text=" $10.00"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -107,6 +109,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="40dp"
         android:backgroundTint="@color/white"
+        android:onClick="onClick15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView22"
         app:srcCompat="@drawable/carro" />
@@ -128,7 +131,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="92dp"
         android:background="#c4e6a2"
-        android:text=" $"
+        android:text=" $30.00"
         android:textAlignment="textStart"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -142,6 +145,7 @@
         android:layout_marginStart="140dp"
         android:layout_marginTop="8dp"
         android:backgroundTint="@color/white"
+        android:onClick="onClick20"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView25"
         app:srcCompat="@drawable/carro" />
@@ -150,15 +154,16 @@
         android:id="@+id/btnComprar1"
         android:layout_width="139dp"
         android:layout_height="44dp"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="32dp"
         android:backgroundTint="#FFBD59"
+        android:onClick="onClickComprar"
         android:text="Comprar"
         android:textColor="#000000"
         android:textSize="16sp"
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
+        app:layout_constraintHorizontal_bias="0.941"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -167,6 +172,7 @@
         android:layout_height="49dp"
         android:layout_marginBottom="28dp"
         android:backgroundTint="#FFFFFF"
+        android:onClick="onClickReturn"
         app:icon="@drawable/resource_return"
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -186,10 +192,10 @@
 
     <TextView
         android:id="@+id/txtNombre5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="178dp"
+        android:layout_height="31dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="204dp"
+        android:layout_marginEnd="88dp"
         android:background="#84CC3F"
         android:fontFamily="@font/open_sans_light"
         android:text="Nombre:"
@@ -198,15 +204,16 @@
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="108dp"
-        android:layout_height="38dp"
+        android:layout_width="143dp"
+        android:layout_height="33dp"
         android:layout_marginBottom="36dp"
         android:background="#84CC3F"
-        android:text=" Total:"
+        android:text="Total: 0.0"
         android:textColor="#000000"
         android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnComprar1"
+        app:layout_constraintHorizontal_bias="0.451"
         app:layout_constraintStart_toEndOf="@+id/btnRegresar5" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

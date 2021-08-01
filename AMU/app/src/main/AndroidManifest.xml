@@ -17,7 +17,7 @@
         <activity android:name=".PantallaRetiro" />
         <activity android:name=".RegistrarVenta" />
         <activity android:name=".Usuarios" />
-        <activity android:name=".PaginaPrincipal" />
+        <activity android:name=".UsuarioVendedor" />
         <activity android:name=".Register" />
         <activity android:name=".About" />
         <activity android:name=".MainActivity">

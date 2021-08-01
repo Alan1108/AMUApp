@@ -12,6 +12,7 @@
         android:layout_height="49dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#FFFFFF"
+        android:onClick="onClickReturn"
         app:icon="@drawable/resource_return"
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +34,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView10"
+        tools:ignore="UnknownIdInLayout" />
 
     <TextView
         android:id="@+id/textView16"

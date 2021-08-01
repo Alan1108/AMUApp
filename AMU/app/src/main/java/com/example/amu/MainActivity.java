@@ -9,8 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.amu.db.dbHelper;
-import com.example.amu.db.dbUsers;
+import com.example.amu.db.DbUsers;
+import com.example.amu.db.DbUsersController;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        dbHelper dbhelper = new dbHelper(MainActivity.this);
+        DbUsers dbhelper = new DbUsers(MainActivity.this);
         SQLiteDatabase db = dbhelper.getWritableDatabase();
         if(db==null){
             Toast.makeText(this,"HUBO UN ERROR CON LA BASE DE DATOS!",Toast.LENGTH_LONG).show();
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickLogin(View view){
-        dbUsers db = new dbUsers(MainActivity.this);
+        DbUsersController db = new DbUsersController(MainActivity.this);
         EditText email = findViewById(R.id.txtEmail);
         EditText password = findViewById(R.id.txtPassword);
         String emailS =email.getText().toString();
@@ -46,7 +46,8 @@ public class MainActivity extends AppCompatActivity {
             mostrarDialogo("BIENVENIDO!!");
             email.setText("");
             password.setText("");
-            Intent intent = new Intent(MainActivity.this,PaginaPrincipal.class);
+            Intent intent = new Intent(MainActivity.this, Usuarios.class);
+            intent.putExtra("idUser",db.obtainId(emailS,passwordS));
             startActivity(intent);
         }else{
             mostrarDialogo("Email o Contraseña erroneos vuelva a intentar!!");

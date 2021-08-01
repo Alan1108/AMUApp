@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:foregroundTint="#84CC3F"
-    tools:context=".PaginaPrincipal">
+    tools:context=".UsuarioVendedor">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -19,24 +19,26 @@
 
     <TextView
         android:id="@+id/txtNombre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="165dp"
+        android:layout_height="26dp"
         android:layout_marginTop="56dp"
-        android:layout_marginEnd="204dp"
+        android:layout_marginEnd="96dp"
         android:background="#84CC3F"
         android:fontFamily="@font/open_sans_light"
         android:text="Nombre:"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtSaldoActual"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="140dp"
+        android:layout_height="19dp"
         android:layout_marginTop="160dp"
         android:background="#FFBD59"
         android:fontFamily="@font/open_sans_light"
         android:text="Saldo Actual:"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,8 +46,8 @@
 
     <Button
         android:id="@+id/btnDetalle"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
+        android:layout_width="112dp"
+        android:layout_height="49dp"
         android:layout_marginTop="60dp"
         android:backgroundTint="#c4e6a2"
         android:fontFamily="@font/open_sans_light"
@@ -62,6 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"
         android:backgroundTint="#84CC3F"
+        android:onClick="onClickRegistrarVenta"
         android:text="Registrar Venta"
         android:textColor="#000000"
         app:iconTint="#000000"
@@ -70,42 +73,27 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TableLayout
-        android:layout_width="367dp"
-        android:layout_height="354dp"
-        android:layout_marginTop="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtSaldoActual">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </TableLayout>
-
     <Button
         android:id="@+id/btnRegresar"
         android:layout_width="66dp"
         android:layout_height="49dp"
         android:layout_marginBottom="32dp"
         android:backgroundTint="#FFFFFF"
+        android:onClick="onClickReturn"
         app:icon="@drawable/resource_return"
         app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnRegistrar"
         app:layout_constraintHorizontal_bias="0.415"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listVentas"
+        android:layout_width="399dp"
+        android:layout_height="390dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRegistrar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

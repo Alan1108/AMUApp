@@ -1,4 +1,4 @@
-package com.example.amu;
+package com.example.amu.model;
 
 public class Person {
     private String name;

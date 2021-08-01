@@ -6,13 +6,13 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class dbHelper extends SQLiteOpenHelper {
+public class DbUsers extends SQLiteOpenHelper {
 
     private static final int DATABASE_VERSION =1;
-    private static final String DATABASE_NAME = "AMU.db";
+    private static final String DATABASE_NAME = "AMU.DbUsers";
     public static final String TABLE_USERS = "USERS";
 
-    public dbHelper(@Nullable Context context) {
+    public DbUsers(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
