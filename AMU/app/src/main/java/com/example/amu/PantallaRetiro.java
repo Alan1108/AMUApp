@@ -16,7 +16,7 @@ public class PantallaRetiro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_retiro);
         DbUsersController dbUsers = new DbUsersController(this);
-        String nombre = dbUsers.obtainName(getIntent().getExtras().getInt("idUser"));
+        String nombre = dbUsers.obtainNameEnterprise(getIntent().getExtras().getInt("idUser"));
         TextView txtNombre = findViewById(R.id.txtNombre3);
         txtNombre.setText(txtNombre.getText()+nombre);
     }

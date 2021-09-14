@@ -10,9 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.amu.adapters.ListaSalesAdapter;
-import com.example.amu.db.DbSales;
 import com.example.amu.db.DbSalesController;
-import com.example.amu.db.DbUsers;
 import com.example.amu.db.DbUsersController;
 import com.example.amu.model.Sale;
 
@@ -38,7 +36,7 @@ public class UsuarioVendedor extends AppCompatActivity {
             saldo+=sale.getTotalPrice();
         }
         DbUsersController dbUsers = new DbUsersController(this);
-        String nombre = dbUsers.obtainName(getIntent().getExtras().getInt("idUser"));
+        String nombre = dbUsers.obtainNameEnterprise(getIntent().getExtras().getInt("idUser"));
         TextView textView = findViewById(R.id.txtNombre);
         TextView textView1 = findViewById(R.id.txtSaldoActual);
         textView.setText(textView.getText()+nombre);

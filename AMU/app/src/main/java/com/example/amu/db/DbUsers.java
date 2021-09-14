@@ -23,6 +23,7 @@ public class DbUsers extends SQLiteOpenHelper {
                 "name TEXT NOT NULL," +
                 "lastName TEXT NOT NULL," +
                 "user TEXT NOT NULL," +
+                "enterprise TEXT NOT NULL,"+
                 "email TEXT NOT NULL," +
                 "password TEXT NOT NULL)");
     }
