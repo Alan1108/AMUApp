@@ -18,9 +18,9 @@ public class PantallaCatalogo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_catalogo);
         DbUsersController dbUsers = new DbUsersController(this);
-        String nombre = dbUsers.obtainName(getIntent().getExtras().getInt("idUser"));
+        String nombre = dbUsers.obtainNameEnterprise(getIntent().getExtras().getInt("idUser"));
         TextView txtNombre = findViewById(R.id.txtNombre5);
-        txtNombre.setText(txtNombre.getText() + nombre);
+        txtNombre.setText(nombre);
     }
 
     public void onClickReturn(View view) {
@@ -29,28 +29,28 @@ public class PantallaCatalogo extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void onClick10(View view) {
+    public void onClick8(View view) {
         TextView txtTotal = findViewById(R.id.textView10);
         String[] separado = txtTotal.getText().toString().split(" ");
-        txtTotal.setText(separado[0] + " " + Double.toString((Double.parseDouble(separado[1]) + 10)));
+        txtTotal.setText(separado[0] + " " + Double.toString((Double.parseDouble(separado[1]) + 7.99)));
     }
 
-    public void onClick30(View view) {
+    public void onClick28(View view) {
         TextView txtTotal = findViewById(R.id.textView10);
         String[] separado = txtTotal.getText().toString().split(" ");
-        txtTotal.setText(separado[0] + " " + (Double.parseDouble(separado[1]) + 30));
+        txtTotal.setText(separado[0] + " " + (Double.parseDouble(separado[1]) + 27.99));
     }
 
     public void onClick15(View view) {
         TextView txtTotal = findViewById(R.id.textView10);
         String[] separado = txtTotal.getText().toString().split(" ");
-        txtTotal.setText(separado[0] + " " + (Double.parseDouble(separado[1]) + 15));
+        txtTotal.setText(separado[0] + " " + (Double.parseDouble(separado[1]) + 14.99));
     }
 
-    public void onClick20(View view) {
+    public void onClick22(View view) {
         TextView txtTotal = findViewById(R.id.textView10);
         String[] separado = txtTotal.getText().toString().split(" ");
-        txtTotal.setText(separado[0] + " " + (Double.parseDouble(separado[1]) + 20));
+        txtTotal.setText(separado[0] + " " + (Double.parseDouble(separado[1]) + 21.99));
     }
 
     public void onClickComprar(View view) {

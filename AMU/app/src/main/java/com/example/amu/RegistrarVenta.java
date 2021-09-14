@@ -29,6 +29,10 @@ public class RegistrarVenta extends AppCompatActivity {
     float auxPrecio;
 
     public void onClickRetiro(View view) {
+        DbSalesController dbSalesController = new DbSalesController(RegistrarVenta.this);
+        for(Sale sale:sales){
+            long id = dbSalesController.insertSale(sale);
+        }
         Intent intent = new Intent(RegistrarVenta.this,PantallaRetiro.class);
         intent.putExtra("idUser",getIntent().getExtras().getInt("idUser"));
         startActivity(intent);
@@ -41,7 +45,7 @@ public class RegistrarVenta extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_venta);
         DbUsersController dbUsers = new DbUsersController(this);
-        String nombre = dbUsers.obtainName(getIntent().getExtras().getInt("idUser"));
+        String nombre = dbUsers.obtainNameEnterprise(getIntent().getExtras().getInt("idUser"));
         TextView textView = findViewById(R.id.txtNombre2);
         textView.setText(textView.getText()+nombre);
         txtPrice1 = (EditText)findViewById(R.id.txtPrice1);
@@ -63,8 +67,7 @@ public class RegistrarVenta extends AppCompatActivity {
                         mostrarDialogo("No se puede registrar este item porque el campo de detalle esta vacio!");
                     }else{
                         Sale sale = new Sale(getIntent().getExtras().getInt("idUser"),precio,aux.getText().toString());
-                        DbSalesController dbSalesController = new DbSalesController(RegistrarVenta.this);
-                        long id = dbSalesController.insertSale(sale);
+                        sales.add(sale);
                     }
                     return true;
                 }
@@ -85,8 +88,7 @@ public class RegistrarVenta extends AppCompatActivity {
                         mostrarDialogo("No se puede registrar este item porque el campo de detalle esta vacio!");
                     }else{
                         Sale sale = new Sale(getIntent().getExtras().getInt("idUser"),precio,aux.getText().toString());
-                        DbSalesController dbSalesController = new DbSalesController(RegistrarVenta.this);
-                        long id = dbSalesController.insertSale(sale);
+                        sales.add(sale);
                     }
                     return true;
                 }
@@ -107,8 +109,7 @@ public class RegistrarVenta extends AppCompatActivity {
                         mostrarDialogo("No se puede registrar este item porque el campo de detalle esta vacio!");
                     }else{
                         Sale sale = new Sale(getIntent().getExtras().getInt("idUser"),precio,aux.getText().toString());
-                        DbSalesController dbSalesController = new DbSalesController(RegistrarVenta.this);
-                        long id = dbSalesController.insertSale(sale);
+                        sales.add(sale);
                     }
                     return true;
                 }
@@ -129,8 +130,7 @@ public class RegistrarVenta extends AppCompatActivity {
                         mostrarDialogo("No se puede registrar este item porque el campo de detalle esta vacio!");
                     }else{
                         Sale sale = new Sale(getIntent().getExtras().getInt("idUser"),precio,aux.getText().toString());
-                        DbSalesController dbSalesController = new DbSalesController(RegistrarVenta.this);
-                        long id = dbSalesController.insertSale(sale);
+                        sales.add(sale);
                     }
                     return true;
                 }
@@ -151,8 +151,7 @@ public class RegistrarVenta extends AppCompatActivity {
                         mostrarDialogo("No se puede registrar este item porque el campo de detalle esta vacio!");
                     }else{
                         Sale sale = new Sale(getIntent().getExtras().getInt("idUser"),precio,aux.getText().toString());
-                        DbSalesController dbSalesController = new DbSalesController(RegistrarVenta.this);
-                        long id = dbSalesController.insertSale(sale);
+                        sales.add(sale);
                     }
                     return true;
                 }

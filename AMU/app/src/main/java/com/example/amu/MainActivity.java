@@ -59,4 +59,8 @@ public class MainActivity extends AppCompatActivity {
     public void mostrarDialogo(String mensaje){
         Toast.makeText(this, mensaje, Toast.LENGTH_SHORT).show();
     }
+
+    public void onClickForgot(View view) {
+
+    }
 }

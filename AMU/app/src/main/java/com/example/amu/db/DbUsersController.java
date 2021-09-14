@@ -29,7 +29,7 @@ public class DbUsersController extends DbUsers {
             values.put("user",person.getUser());
             values.put("email",person.getEmail());
             values.put("password",person.getPassword());
-
+            values.put("enterprise",person.getEnterprise());
             id = db.insert(TABLE_USERS,null,values);
         }catch (Exception ex){
             ex.toString();
@@ -61,12 +61,13 @@ public class DbUsersController extends DbUsers {
         return 0;
     }
 
-    public String obtainName(int idUser){
+    public String obtainNameEnterprise(int idUser){
         DbUsers dbUsersHelper = new DbUsers(context);
         SQLiteDatabase db = dbUsersHelper.getWritableDatabase();
         Cursor cursorUsers = db.rawQuery("SELECT * FROM " + TABLE_USERS + " WHERE id ="+idUser,null);
         if(cursorUsers.moveToFirst()){
-            return cursorUsers.getString(1)+" "+cursorUsers.getString(2);
+            return cursorUsers.getString(1)+" "+cursorUsers.getString(2)
+                    + "\nEnterprise:" + cursorUsers.getString(4);
         }
         return "";
     }

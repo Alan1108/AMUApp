@@ -6,13 +6,15 @@ public class Person {
     private String email;
     private String user;
     private String password;
+    private String enterprise;
 
-    public Person(String name,String lastName,String email,String user,String password){
+    public Person(String name, String lastName, String email, String user, String password, String enterprise) {
         this.name = name;
-        this.lastName =lastName;
+        this.lastName = lastName;
         this.email = email;
         this.user = user;
         this.password = password;
+        this.enterprise = enterprise;
     }
 
     public Person(){
@@ -86,5 +88,13 @@ public class Person {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getEnterprise() {
+        return enterprise;
+    }
+
+    public void setEnterprise(String enterprise) {
+        this.enterprise = enterprise;
     }
 }

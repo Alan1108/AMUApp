@@ -16,7 +16,7 @@ public class PantallaCompra extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla_compra);
         DbUsersController dbUsers = new DbUsersController(this);
-        String nombre = dbUsers.obtainName(getIntent().getExtras().getInt("idUser"));
+        String nombre = dbUsers.obtainNameEnterprise(getIntent().getExtras().getInt("idUser"));
         TextView txtNombre = findViewById(R.id.txtNombre6);
         txtNombre.setText(txtNombre.getText()+nombre);
     }
